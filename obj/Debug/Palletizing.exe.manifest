@@ -307,14 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Palletizing.exe" size="6359552">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Palletizing.exe" size="6360064">
       <assemblyIdentity name="Palletizing" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s96aUe2h2YAtq6IQthfDNQts9w176mKa06mKqq8725I=</dsig:DigestValue>
+        <dsig:DigestValue>ffFZg6HK7XakhKxeioh8rDFZJoGeXtW58S+0hymyMa0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

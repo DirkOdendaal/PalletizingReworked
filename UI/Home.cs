@@ -95,7 +95,6 @@ namespace PalletizingReworked
                     _bindingSource.DataSource = _palletManager.GetAll();
                     ddgvPalletizing.DataSource = _bindingSource;
 
-                    ddgvPalletizing.Columns["key"].Visible = false;
 
                     //Master Data Collection
                     _blockManager.DeleteAllBlocks();
@@ -580,7 +579,7 @@ namespace PalletizingReworked
 
         private void pnlPalletizing_Load()
         {
-            //_bindingSource.ResetBindings(false);
+            ddgvPalletizing.Columns["key"].Visible = false;
             pnlAddPallet.Visible = false;
             pnlSettings.Visible = false;
             pnlCreateRun.Visible = false;
@@ -785,6 +784,7 @@ namespace PalletizingReworked
 
         private void ddgvPalletizing_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+
             DataGridViewRow row = ddgvPalletizing.Rows[e.RowIndex];
             var value = row.Cells["key"].Value;
             if (value == null)
@@ -859,12 +859,20 @@ namespace PalletizingReworked
 
         private async void btnUploadRecords_Click(object sender, EventArgs e)
         {
+            progressBarUp.Visible = true;
+            lblUp.Text = "Uploading";
+            lblUp.Visible = true;
             List<PalletRecord> nonUploadedList = _palletManager.GetNotUploadPallet();
+            lblUp.Text = $"{nonUploadedList.Count} records Uploading";
+
             foreach (PalletRecord pallet in nonUploadedList)
             {
                 string newKey = await _api.addPallet(pallet);
                 pallet.key = newKey;
             }
+
+            lblUp.Visible = false;
+            progressBarUp.Visible = false;
         }
 
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)

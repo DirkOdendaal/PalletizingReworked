@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PalletizingReworked.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,7 +17,8 @@ internal class PalletsGateway
 
     public BindingList<PalletRecord> GetAll()
     {
-        _dbContext.Pallets.OrderByDescending(b => b.Timestamp).Load();
+        string date = DateTime.Now.Date.ToString();
+        _dbContext.Pallets.Where(d => d.Date == date).OrderByDescending(b => b.Timestamp).Load();
         return _dbContext.Pallets.Local.ToBindingList();
     }
 
@@ -38,7 +40,7 @@ internal class PalletsGateway
 
         record.key = pallet;
         _dbContext.Update(record);
-        return true;
+        return _dbContext.SaveChanges() > 0;
     }
 }
 
