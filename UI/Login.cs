@@ -145,7 +145,6 @@ namespace PalletizingReworked
         {
             Bitmap original = (Bitmap)pbHome.Image.Clone();
             pbHome.Image = SetAlpha((Bitmap)original, 80);
-            
         }
     }
 }
