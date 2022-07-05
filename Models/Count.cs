@@ -10,9 +10,9 @@ namespace PalletizingReworked.Models
         public string count { get; set; }
 
         [JsonProperty("Size Class")]
-        public string clas{ get; set; }
+        public string clas { get; set; }
 
         [JsonProperty("Commodity")]
-        public string commod{ get; set; }
+        public string commod { get; set; }
     }
 }

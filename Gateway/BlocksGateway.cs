@@ -7,8 +7,6 @@ namespace PalletizingReworked.Gateway
     internal class BlocksGateway
     {
         ApplicationDbContext _dbContext = new ApplicationDbContext();
-
-
         public bool Add(Blocks blocks)
         {
             _dbContext.Blocks.Add(blocks);

@@ -6,7 +6,6 @@ using PalletizingReworked.Models;
 using QRCoder;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.IO.Ports;
@@ -28,6 +27,7 @@ namespace PalletizingReworked
         private SerialPort _serialPort;
         private ManagementEventWatcher watcherAttach;
         private ManagementEventWatcher watcherRemove;
+        private BindingSource _bindingSource = new BindingSource();
 
         //Database helpers
         private UserManager _userManager = new UserManager();
@@ -39,7 +39,8 @@ namespace PalletizingReworked
         private GradeManager _gradeManager = new GradeManager();
         private Count_SizeManager _countManager = new Count_SizeManager();
         private PalletsManager _palletManager = new PalletsManager();
-        private BindingSource _bindingSource = new BindingSource();
+
+        //Models
         private PalletRecord _selectedRecord = new PalletRecord();
         private ScaleSettings _settings = new ScaleSettings();
 
@@ -916,6 +917,5 @@ namespace PalletizingReworked
         {
             return new string(input.Where(c => char.IsDigit(c)).ToArray());
         }
-
     }
 }

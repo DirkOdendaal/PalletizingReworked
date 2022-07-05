@@ -1,9 +1,5 @@
 ﻿using PalletizingReworked.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PalletizingReworked.Gateway
 {
@@ -32,6 +28,5 @@ namespace PalletizingReworked.Gateway
             _dbContext.CreateRun.Remove(run);
             return _dbContext.SaveChanges() > 0;
         }
-
     }
 }

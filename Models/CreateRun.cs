@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PalletizingReworked.Models
+﻿namespace PalletizingReworked.Models
 {
     internal class CreateRun
     {
@@ -17,7 +11,5 @@ namespace PalletizingReworked.Models
         public string blockName { get; set; }
         public string cultivar { get; set; }
         public string commodity { get; set; }
-
-
     }
 }

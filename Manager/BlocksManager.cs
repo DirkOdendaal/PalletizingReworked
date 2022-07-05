@@ -36,16 +36,16 @@ namespace PalletizingReworked.Manager
         {
             return _blocksGateway.GetBlocksListUniqueFilter(orch);
         }
-        public List<string> GetCommListUniqueFilter(string prodUnit,string block)
+        public List<string> GetCommListUniqueFilter(string prodUnit, string block)
         {
-            return _blocksGateway.GetCommListUniqueFilter(prodUnit,block);
+            return _blocksGateway.GetCommListUniqueFilter(prodUnit, block);
         }
         public List<string> GetCultListUniqueFilter(string comm)
         {
             return _blocksGateway.GetCultListUniqueFilter(comm);
         }
 
-        public Blocks GetRunRecord(string prodUnit,string orch,string block)
+        public Blocks GetRunRecord(string prodUnit, string orch, string block)
         {
             return _blocksGateway.GetRunRecord(prodUnit, orch, block);
         }
