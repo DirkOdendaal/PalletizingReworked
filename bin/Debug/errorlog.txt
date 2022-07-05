@@ -1,0 +1,128 @@
+2022/07/05 11:56:48
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'UNIQUE constraint failed: Brand.Id'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.NoopExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at PalletizingReworked.Gateway.BrandGateway.AddRange(List`1 brand) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Gateway\BrandGateway.cs:line 20
+   at PalletizingReworked.Manager.BrandManager.AddRange(List`1 brand) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Manager\BrandManager.cs:line 17
+   at PalletizingReworked.Classes.APIController.<pullBrand>d__10.MoveNext() in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\APIController.cs:line 94
+-----
+2022/07/05 11:56:49
+System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   at PalletizingReworked.Classes.LabelPrintController.DrawText(String text, Font font, Color textColor, Color backColor) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\LabelPrintController.cs:line 129
+-----
+2022/07/05 11:56:49
+System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   at PalletizingReworked.Classes.LabelPrintController.DrawText(String text, Font font, Color textColor, Color backColor) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\LabelPrintController.cs:line 129
+-----
+2022/07/05 11:56:50
+System.IO.FileNotFoundException: barcode.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at System.Drawing.Image.FromFile(String filename)
+   at PalletizingReworked.Classes.LabelPrintController.<>c__DisplayClass1_0.<printLabel>b__2(Object s, PrintPageEventArgs args) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\LabelPrintController.cs:line 80
+   at System.Drawing.Printing.PrintDocument.OnPrintPage(PrintPageEventArgs e)
+   at System.Drawing.Printing.PrintDocument._OnPrintPage(PrintPageEventArgs e)
+   at System.Drawing.Printing.PrintController.PrintLoop(PrintDocument document)
+   at System.Drawing.Printing.PrintController.Print(PrintDocument document)
+   at System.Drawing.Printing.PrintDocument.Print()
+   at PalletizingReworked.Classes.LabelPrintController.printLabel(String printLab) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\LabelPrintController.cs:line 88
+-----
+2022/07/05 11:56:50
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'UNIQUE constraint failed: Pack.Id'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.NoopExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at PalletizingReworked.Gateway.PackGateway.AddRange(List`1 pack) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Gateway\PackGateway.cs:line 23
+   at PalletizingReworked.Manager.PackManager.AddRange(List`1 pack) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Manager\PackManager.cs:line 22
+   at PalletizingReworked.Classes.APIController.<pullPack>d__11.MoveNext() in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\APIController.cs:line 138
+-----
+2022/07/05 11:56:51
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'UNIQUE constraint failed: Grade.Id'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.NoopExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at PalletizingReworked.Gateway.GradeGateway.AddRange(List`1 grade) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Gateway\GradeGateway.cs:line 23
+   at PalletizingReworked.Manager.GradeManager.AddRange(List`1 grade) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Manager\GradeManager.cs:line 18
+   at PalletizingReworked.Classes.APIController.<pullGrade>d__12.MoveNext() in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\APIController.cs:line 182
+-----
+2022/07/05 11:56:52
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'UNIQUE constraint failed: Count.Id'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.NoopExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at PalletizingReworked.Gateway.Count_SizeGateway.AddRange(List`1 count) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Gateway\Count_SizeGateway.cs:line 23
+   at PalletizingReworked.Manager.Count_SizeManager.AddRange(List`1 count) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Manager\Count_SizeManager.cs:line 21
+   at PalletizingReworked.Classes.APIController.<pullCount>d__13.MoveNext() in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\APIController.cs:line 226
+-----
+2022/07/05 11:57:44
+System.IO.FileNotFoundException: barcode.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at System.Drawing.Image.FromFile(String filename)
+   at PalletizingReworked.Classes.LabelPrintController.<>c__DisplayClass1_0.<printLabel>b__2(Object s, PrintPageEventArgs args) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\LabelPrintController.cs:line 80
+   at System.Drawing.Printing.PrintDocument.OnPrintPage(PrintPageEventArgs e)
+   at System.Drawing.Printing.PrintDocument._OnPrintPage(PrintPageEventArgs e)
+   at System.Drawing.Printing.PrintController.PrintLoop(PrintDocument document)
+   at System.Drawing.Printing.PrintController.Print(PrintDocument document)
+   at System.Drawing.Printing.PrintDocument.Print()
+   at PalletizingReworked.Classes.LabelPrintController.printLabel(String printLab) in D:\OneDrive\FarmTrace Werk\Palletizing Reworked\PalletizingReworked\PalletizingReworked\Controllers\LabelPrintController.cs:line 88
+-----
